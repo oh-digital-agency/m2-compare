@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="oh_compare" translate="label" sortOrder="100" showInDefault="1"
+                 showInWebsite="1"
+                 showInStore="1">
+            <label>Product compare</label>
+            <tab>oh_core</tab>
+            <resource>OH_Compare::settings</resource>
+            <group id="settings" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Settings</label>
+                <field id="restrict_qty" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Restrict list quantity</label>
+                    <comment>Will restrict qty of different items a customer can add to his/her list</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="qty_allowed" type="text" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Qty allowed</label>
+                    <depends>
+                        <field id="restrict_qty">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

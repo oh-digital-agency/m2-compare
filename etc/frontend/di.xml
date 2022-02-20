@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Controller\Product\Compare\Add">
+        <plugin name="OH_Compare::restrict_qty" type="OH\Compare\Plugin\AddPlugin" disabled="false"/>
+    </type>
+</config>
